@@ -3,7 +3,6 @@
 -- Copyright 2011-13 Paul Kulchenko
 -- Based on RemDebug 1.0 Copyright Kepler Project 2005
 --
-
 local mobdebug = {
   _NAME = "mobdebug",
   _VERSION = 0.542,
@@ -1462,4 +1461,4 @@ mobdebug.yield = nil -- callback
 -- module is loaded manually
 package.loaded.mobdebug = mobdebug
 
-return mobdebug
+return {}--mobdebug

@@ -55,7 +55,7 @@ bool AppDelegate::applicationDidFinishLaunching()
     lua_State* L = engine->getLuaStack()->getLuaState();
     lua_module_register(L);
     //The call was commented because it will lead to ZeroBrane Studio can't find correct context when debugging
-    //engine->executeScriptFile("src/hello.lua");
+    //engine->executeScriptFile("src/protobuf.lua");
     
 #if CC_64BITS
     FileUtils::getInstance()->addSearchPath("src/64bit");
