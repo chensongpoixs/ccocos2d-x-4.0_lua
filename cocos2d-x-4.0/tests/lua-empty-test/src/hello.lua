@@ -3,65 +3,17 @@ require "cocos.init"
 
 
 
+-- cclog
+cclog = function(...)
+    print(string.format(...))
+end
+
 require "packages.base.protobuf"
 
 --addr = io.open("addressbook.pb","rb")
 --buffer = addr:read "*a"
 --addr:close()
 
-local filePath = cc.FileUtils:getInstance():fullPathForFilename("addressbook.pb")
-local buffer = read_protobuf_file_c(filePath)
-
-print("---test pbc----------")
-
-print(filePath..buffer)
-protobuf.register(buffer)
-
-local t = protobuf.decode("google.protobuf.FileDescriptorSet", buffer)
-
-local proto = t.file[1]
-
-print(proto.name)
-print(proto.package)
-
-local message = proto.message_type
-
-for _,v in ipairs(message) do
-	print(v.name)
-	for _,v in ipairs(v.field) do
-		print("\t".. v.name .. " ["..v.number.."] " .. v.label)
-	end
-end
-
-local addressbook = {
-	name = "Alice",
-	id = 12345,
-	phone = {
-		{ number = "1301234567" },
-		{ number = "87654321", type = "WORK" },
-	}
-}
-
-local code = protobuf.encode("tutorial.Person", addressbook)
-
-local decode = protobuf.decode("tutorial.Person" , code)
-
-print(decode.name)
-print(decode.id)
-for _,v in ipairs(decode.phone) do
-	print("\t"..v.number, v.type)
-end
-
-local phonebuf = protobuf.pack("tutorial.Person.PhoneNumber number","87654321")
-local buffer = protobuf.pack("tutorial.Person name id phone", "Alice", 123, { phonebuf })
-print(protobuf.unpack("tutorial.Person name id phone", buffer))
-
-print("--------------------")
-
--- cclog
-cclog = function(...)
-    print(string.format(...))
-end
 
 -- for CCLuaEngine traceback
 function __G__TRACKBACK__(msg)
@@ -99,6 +51,58 @@ local function main()
 
     require "hello2"
     cclog("result is " .. myadd(1, 1))
+
+
+
+	
+	local filePath = cc.FileUtils:getInstance():fullPathForFilename("addressbook.pb")
+	local buffer = read_protobuf_file_c(filePath)
+
+	cclog("---test pbc----------")
+
+	print(filePath..buffer)
+	protobuf.register(buffer)
+
+	local t = protobuf.decode("google.protobuf.FileDescriptorSet", buffer)
+
+	local proto = t.file[1]
+
+	print(proto.name)
+	print(proto.package)
+
+	local message = proto.message_type
+
+	for _,v in ipairs(message) do
+		print(v.name)
+		for _,v in ipairs(v.field) do
+			print("\t".. v.name .. " ["..v.number.."] " .. v.label)
+		end
+	end
+
+	local addressbook = {
+		name = "Alice",
+		id = 12345,
+		phone = {
+			{ number = "1301234567" },
+			{ number = "87654321", type = "WORK" },
+		}
+	}
+
+	local code = protobuf.encode("tutorial.Person", addressbook)
+
+	local decode = protobuf.decode("tutorial.Person" , code)
+
+	print(decode.name)
+	print(decode.id)
+	for _,v in ipairs(decode.phone) do
+		print("\t"..v.number, v.type)
+	end
+
+	local phonebuf = protobuf.pack("tutorial.Person.PhoneNumber number","87654321")
+	local buffer = protobuf.pack("tutorial.Person name id phone", "Alice", 123, { phonebuf })
+	print(protobuf.unpack("tutorial.Person name id phone", buffer))
+
+	print("--------------------")
 
     ---------------
 
