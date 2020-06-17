@@ -54,6 +54,84 @@ local function main()
 
 
 
+
+	---------------------------------
+
+----	local socket = require"socket"
+----
+----	local host = "127.0.0.1"
+----	local port = "8888"
+----	local sever = assert(socket.bind(host, port)) --绑定
+----	sever:settimeout(nil)   --不设置阻塞
+----	local tab = {}
+----	table.insert(tab, sever)
+----
+----	while 1 do
+----	  local s
+----	  s,_,_ = socket.select(tab, nil, nil)
+----	  for k, v in ipairs(s) do
+----		if v == sever then
+----		local conn  = v:accept()  --连接
+----		table.insert(tab, conn)
+----	 else
+----	   c, e = v:receive() --接收
+----	   if c == nil then
+----	  table.remove(tab, k)
+----	  v:close()
+----		else
+----	  if e ~= "closed" then
+----		cclog(c)
+----		cclog("rvce")
+----		v:send("ok\n") --发送
+----	  else
+----		break
+----	  end
+----	   end
+----	 end
+----	  end
+----	end
+----
+----	--ack="ack\n"
+----
+----	--[[while 1 do
+----	  local conn = sever:accept()
+----	  if conn then
+----	 print("accep")
+----	  end
+----	end--]]
+
+
+	local socket = require ("socket")
+	local client = false;
+
+	if not socket then
+		cclog("load socket module failed.")
+	else
+		cclog("success load socket module.")
+		local host = "127.0.0.1"
+		local port = 34561
+		client = socket.connect4(host, port)
+		if not client then
+			print("connect server failed.")
+		else
+			client:send("this is lua client!");        
+			client:settimeout(0);
+		end
+	end
+
+	function receive_message()
+		if client then
+			local recvstr, err = client:receive();
+			cclog("recvstr, err:", recvstr, err);
+		end
+	end
+
+
+	--------------------------------------
+
+
+
+
 	
 	local filePath = cc.FileUtils:getInstance():fullPathForFilename("addressbook.pb")
 	local buffer = read_protobuf_file_c(filePath)
