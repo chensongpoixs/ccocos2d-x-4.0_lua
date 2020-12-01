@@ -53,13 +53,31 @@ if(APPLE OR VS)
 endif()
 
 list(APPEND GAME_HEADER
-     Classes/AppMacros.h
-     Classes/HelloWorldScene.h
-     Classes/AppDelegate.h
+     Classes/AIBall.h
+Classes/AppDelegate.h
+Classes/AppMacros.h
+Classes/BaseBall.h
+Classes/Const.h
+Classes/Demon.h
+Classes/Game.h
+Classes/HelloWorldScene.h
+Classes/MenuScene.h
+Classes/PlayerBall.h
+Classes/PlayerBullet.h
+Classes/StaticBall.h
      )
 list(APPEND GAME_SOURCE
      Classes/AppDelegate.cpp
-     Classes/HelloWorldScene.cpp
+          Classes/AIBall.cpp
+Classes/BaseBall.cpp
+Classes/Const.cpp
+Classes/Demon.cpp
+Classes/Game.cpp
+Classes/HelloWorldScene.cpp
+Classes/MenuScene.cpp
+Classes/PlayerBall.cpp
+Classes/PlayerBullet.cpp
+Classes/StaticBall.cpp
      )
 
 if(ANDROID)

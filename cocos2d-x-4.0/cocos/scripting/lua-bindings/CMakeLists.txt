@@ -2,149 +2,149 @@ set(cocos_root ${COCOS2DX_ROOT_PATH})
 # 在lua_bindings_manual_headers最后面添加manual/pbc/lua_cocos2dx_pbc_manual.h、manual/pbc/pbc-lua.h
 # 在lua_bindings_manual_files最后面添加manual/pbc/lua_cocos2dx_pbc_manual.cpp、manual/pbc/pbc-lua.c
 set(lua_bindings_manual_headers
-    manual/CCComponentLua.h
-    manual/3d/lua_cocos2dx_3d_manual.h
-    manual/CCLuaStack.h
-    manual/CCLuaEngine.h
-    manual/lua_module_register.h
-    manual/CCLuaBridge.h
-    manual/extension/lua_cocos2dx_extension_manual.h
-    manual/LuaBasicConversions.h
-    manual/spine/LuaSkeletonAnimation.h
-    manual/platform/ios/CCLuaObjcBridge.h
-    manual/network/lua_cocos2dx_network_manual.h
-    manual/network/lua_xml_http_request.h
-    manual/network/Lua_web_socket.h
-    manual/network/lua_extensions.h
-    manual/network/lua_downloader.h
-    manual/audioengine/lua_cocos2dx_audioengine_manual.h
-    manual/Lua-BindingsExport.h
-    manual/tolua_fix.h
-    manual/navmesh/lua_cocos2dx_navmesh_manual.h
-    manual/navmesh/lua_cocos2dx_navmesh_conversions.h
-    manual/cocos2d/lua_cocos2dx_deprecated.h
-    manual/cocos2d/LuaScriptHandlerMgr.h
-    manual/cocos2d/lua_cocos2dx_manual.hpp
-    manual/Cocos2dxLuaLoader.h
-    manual/CCLuaValue.h
-    manual/physics3d/lua_cocos2dx_physics3d_manual.h
-    manual/cocostudio/lua-cocos-studio-conversions.h
-    manual/cocostudio/CustomGUIReader.h
-    manual/ui/lua_cocos2dx_ui_manual.hpp
-    manual/controller/lua_cocos2dx_controller_manual.hpp
-	manual/pbc/lua_cocos2dx_pbc_manual.h
-	manual/pbc/pbc-lua.h
+    scripting/lua-bindings/manual/CCComponentLua.h
+    scripting/lua-bindings/manual/3d/lua_cocos2dx_3d_manual.h
+    scripting/lua-bindings/manual/CCLuaStack.h
+    scripting/lua-bindings/manual/CCLuaEngine.h
+    scripting/lua-bindings/manual/lua_module_register.h
+    scripting/lua-bindings/manual/CCLuaBridge.h
+    scripting/lua-bindings/manual/extension/lua_cocos2dx_extension_manual.h
+    scripting/lua-bindings/manual/LuaBasicConversions.h
+    scripting/lua-bindings/manual/spine/LuaSkeletonAnimation.h
+    scripting/lua-bindings/manual/platform/ios/CCLuaObjcBridge.h
+    scripting/lua-bindings/manual/network/lua_cocos2dx_network_manual.h
+    scripting/lua-bindings/manual/network/lua_xml_http_request.h
+    scripting/lua-bindings/manual/network/Lua_web_socket.h
+    scripting/lua-bindings/manual/network/lua_extensions.h
+    scripting/lua-bindings/manual/network/lua_downloader.h
+    scripting/lua-bindings/manual/audioengine/lua_cocos2dx_audioengine_manual.h
+    scripting/lua-bindings/manual/Lua-BindingsExport.h
+    scripting/lua-bindings/manual/tolua_fix.h
+    scripting/lua-bindings/manual/navmesh/lua_cocos2dx_navmesh_manual.h
+    scripting/lua-bindings/manual/navmesh/lua_cocos2dx_navmesh_conversions.h
+    scripting/lua-bindings/manual/cocos2d/lua_cocos2dx_deprecated.h
+    scripting/lua-bindings/manual/cocos2d/LuaScriptHandlerMgr.h
+    scripting/lua-bindings/manual/cocos2d/lua_cocos2dx_manual.hpp
+    scripting/lua-bindings/manual/Cocos2dxLuaLoader.h
+    scripting/lua-bindings/manual/CCLuaValue.h
+    scripting/lua-bindings/manual/physics3d/lua_cocos2dx_physics3d_manual.h
+    scripting/lua-bindings/manual/cocostudio/lua-cocos-studio-conversions.h
+    scripting/lua-bindings/manual/cocostudio/CustomGUIReader.h
+    scripting/lua-bindings/manual/ui/lua_cocos2dx_ui_manual.hpp
+    scripting/lua-bindings/manual/controller/lua_cocos2dx_controller_manual.hpp
+	scripting/lua-bindings/manual/pbc/lua_cocos2dx_pbc_manual.h
+	scripting/lua-bindings/manual/pbc/pbc-lua.h
     )
 
 set(lua_bindings_manual_files
-    manual/CCLuaBridge.cpp
-    manual/CCLuaEngine.cpp
-    manual/CCLuaStack.cpp
-    manual/CCLuaValue.cpp
-    manual/Cocos2dxLuaLoader.cpp
-    manual/LuaBasicConversions.cpp
-    manual/lua_module_register.cpp
-    manual/tolua_fix.cpp
-    manual/CCComponentLua.cpp
-    manual/cocos2d/LuaScriptHandlerMgr.cpp
-    manual/cocos2d/lua_cocos2dx_deprecated.cpp
-    manual/cocos2d/lua_cocos2dx_manual.cpp
-    manual/cocos2d/lua_cocos2dx_physics_manual.cpp
-    manual/3d/lua_cocos2dx_3d_manual.cpp
-    manual/cocostudio/CustomGUIReader.cpp
-    manual/cocostudio/lua_cocos2dx_coco_studio_manual.cpp
-    manual/cocostudio/lua-cocos-studio-conversions.cpp
-    manual/cocostudio/lua_cocos2dx_csloader_manual.cpp
-    manual/controller/lua_cocos2dx_controller_manual.cpp
-    manual/extension/lua_cocos2dx_extension_manual.cpp
-    manual/network/lua_extensions.c
-    manual/network/lua_cocos2dx_network_manual.cpp
-    manual/network/Lua_web_socket.cpp
-    manual/network/lua_xml_http_request.cpp
-    manual/network/lua_downloader.cpp
-    #manual/spine/lua_cocos2dx_spine_manual.cpp
-    manual/spine/LuaSkeletonAnimation.cpp
-    manual/ui/lua_cocos2dx_ui_manual.cpp
-    manual/audioengine/lua_cocos2dx_audioengine_manual.cpp
-    manual/physics3d/lua_cocos2dx_physics3d_manual.cpp
-    manual/navmesh/lua_cocos2dx_navmesh_conversions.cpp
-    manual/navmesh/lua_cocos2dx_navmesh_manual.cpp
-	manual/pbc/lua_cocos2dx_pbc_manual.cpp
-	manual/pbc/pbc-lua.c
+    scripting/lua-bindings/manual/CCLuaBridge.cpp
+    scripting/lua-bindings/manual/CCLuaEngine.cpp
+    scripting/lua-bindings/manual/CCLuaStack.cpp
+    scripting/lua-bindings/manual/CCLuaValue.cpp
+    scripting/lua-bindings/manual/Cocos2dxLuaLoader.cpp
+    scripting/lua-bindings/manual/LuaBasicConversions.cpp
+    scripting/lua-bindings/manual/lua_module_register.cpp
+    scripting/lua-bindings/manual/tolua_fix.cpp
+    scripting/lua-bindings/manual/CCComponentLua.cpp
+    scripting/lua-bindings/manual/cocos2d/LuaScriptHandlerMgr.cpp
+    scripting/lua-bindings/manual/cocos2d/lua_cocos2dx_deprecated.cpp
+    scripting/lua-bindings/manual/cocos2d/lua_cocos2dx_manual.cpp
+    scripting/lua-bindings/manual/cocos2d/lua_cocos2dx_physics_manual.cpp
+    scripting/lua-bindings/manual/3d/lua_cocos2dx_3d_manual.cpp
+    scripting/lua-bindings/manual/cocostudio/CustomGUIReader.cpp
+    scripting/lua-bindings/manual/cocostudio/lua_cocos2dx_coco_studio_manual.cpp
+    scripting/lua-bindings/manual/cocostudio/lua-cocos-studio-conversions.cpp
+    scripting/lua-bindings/manual/cocostudio/lua_cocos2dx_csloader_manual.cpp
+    scripting/lua-bindings/manual/controller/lua_cocos2dx_controller_manual.cpp
+    scripting/lua-bindings/manual/extension/lua_cocos2dx_extension_manual.cpp
+    scripting/lua-bindings/manual/network/lua_extensions.c
+    scripting/lua-bindings/manual/network/lua_cocos2dx_network_manual.cpp
+    scripting/lua-bindings/manual/network/Lua_web_socket.cpp
+    scripting/lua-bindings/manual/network/lua_xml_http_request.cpp
+    scripting/lua-bindings/manual/network/lua_downloader.cpp
+    scripting/lua-bindings/#manual/spine/lua_cocos2dx_spine_manual.cpp
+    scripting/lua-bindings/manual/spine/LuaSkeletonAnimation.cpp
+    scripting/lua-bindings/manual/ui/lua_cocos2dx_ui_manual.cpp
+    scripting/lua-bindings/manual/audioengine/lua_cocos2dx_audioengine_manual.cpp
+    scripting/lua-bindings/manual/physics3d/lua_cocos2dx_physics3d_manual.cpp
+    scripting/lua-bindings/manual/navmesh/lua_cocos2dx_navmesh_conversions.cpp
+    scripting/lua-bindings/manual/navmesh/lua_cocos2dx_navmesh_manual.cpp
+	scripting/lua-bindings/manual/pbc/lua_cocos2dx_pbc_manual.cpp
+	scripting/lua-bindings/manual/pbc/pbc-lua.c
     )
 
 set(lua_bindings_auto_headers
-    auto/lua_cocos2dx_audioengine_auto.hpp
-    auto/lua_cocos2dx_3d_auto.hpp
-    auto/lua_cocos2dx_controller_auto.hpp
-    auto/lua_cocos2dx_spine_auto.hpp
-    auto/lua_cocos2dx_studio_auto.hpp
-    auto/lua_cocos2dx_auto.hpp
-    auto/lua_cocos2dx_navmesh_auto.hpp
-    auto/lua_cocos2dx_csloader_auto.hpp
-    auto/lua_cocos2dx_physics3d_auto.hpp
-    auto/lua_cocos2dx_ui_auto.hpp
-    auto/lua_cocos2dx_physics_auto.hpp
-    auto/lua_cocos2dx_extension_auto.hpp
-    auto/lua_cocos2dx_backend_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_audioengine_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_3d_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_controller_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_spine_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_studio_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_navmesh_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_csloader_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_physics3d_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_ui_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_physics_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_extension_auto.hpp
+    scripting/lua-bindings/auto/lua_cocos2dx_backend_auto.hpp
     )
 
 set(lua_bindings_auto_files
-    auto/lua_cocos2dx_3d_auto.cpp
-    auto/lua_cocos2dx_auto.cpp
-    auto/lua_cocos2dx_controller_auto.cpp
-    auto/lua_cocos2dx_extension_auto.cpp
-    auto/lua_cocos2dx_physics_auto.cpp
-    #auto/lua_cocos2dx_spine_auto.cpp
-    auto/lua_cocos2dx_studio_auto.cpp
-    auto/lua_cocos2dx_csloader_auto.cpp
-    auto/lua_cocos2dx_ui_auto.cpp
-    auto/lua_cocos2dx_audioengine_auto.cpp
-    auto/lua_cocos2dx_physics3d_auto.cpp
-    auto/lua_cocos2dx_navmesh_auto.cpp
-    auto/lua_cocos2dx_backend_auto.cpp
+    scripting/lua-bindings/auto/lua_cocos2dx_3d_auto.cpp
+    scripting/lua-bindings/auto/lua_cocos2dx_auto.cpp
+    scripting/lua-bindings/auto/lua_cocos2dx_controller_auto.cpp
+    scripting/lua-bindings/auto/lua_cocos2dx_extension_auto.cpp
+    scripting/lua-bindings/auto/lua_cocos2dx_physics_auto.cpp
+    #scripting/lua-bindings/#auto/lua_cocos2dx_spine_auto.cpp
+    scripting/lua-bindings/auto/lua_cocos2dx_studio_auto.cpp
+    scripting/lua-bindings/auto/lua_cocos2dx_csloader_auto.cpp
+    scripting/lua-bindings/auto/lua_cocos2dx_ui_auto.cpp
+    scripting/lua-bindings/auto/lua_cocos2dx_audioengine_auto.cpp
+    scripting/lua-bindings/auto/lua_cocos2dx_physics3d_auto.cpp
+    scripting/lua-bindings/auto/lua_cocos2dx_navmesh_auto.cpp
+    scripting/lua-bindings/auto/lua_cocos2dx_backend_auto.cpp
     )
 
 if(APPLE)
     # CCLuaObjcBridge.mm needed by ios and mac
     set(lua_bindings_manual_headers
         ${lua_bindings_manual_headers}
-        manual/platform/ios/CCLuaObjcBridge.h
+        scripting/lua-bindings/manual/platform/ios/CCLuaObjcBridge.h
         )
     set(lua_bindings_manual_files
         ${lua_bindings_manual_files}
-        manual/platform/ios/CCLuaObjcBridge.mm
+        scripting/lua-bindings/manual/platform/ios/CCLuaObjcBridge.mm
         )
     if(IOS)
         set(lua_bindings_manual_headers
             ${lua_bindings_manual_headers}
-            manual/ui/lua_cocos2dx_webview_manual.hpp
-            auto/lua_cocos2dx_webview_auto.hpp
-            auto/lua_cocos2dx_video_auto.hpp
-            manual/ui/lua_cocos2dx_video_manual.hpp
+            scripting/lua-bindings/manual/ui/lua_cocos2dx_webview_manual.hpp
+            scripting/lua-bindings/auto/lua_cocos2dx_webview_auto.hpp
+            scripting/lua-bindings/auto/lua_cocos2dx_video_auto.hpp
+            scripting/lua-bindings/manual/ui/lua_cocos2dx_video_manual.hpp
             )
         set(lua_bindings_manual_files
             ${lua_bindings_manual_files}
-            manual/ui/lua_cocos2dx_webview_manual.cpp
-            auto/lua_cocos2dx_webview_auto.cpp
-            manual/ui/lua_cocos2dx_video_manual.cpp
-            auto/lua_cocos2dx_video_auto.cpp
+            scripting/lua-bindings/manual/ui/lua_cocos2dx_webview_manual.cpp
+            scripting/lua-bindings/auto/lua_cocos2dx_webview_auto.cpp
+            scripting/lua-bindings/manual/ui/lua_cocos2dx_video_manual.cpp
+            scripting/lua-bindings/auto/lua_cocos2dx_video_auto.cpp
             )
     endif()
 elseif(ANDROID)
     set(lua_bindings_manual_headers
         ${lua_bindings_manual_headers}
-        manual/ui/lua_cocos2dx_webview_manual.hpp
-        auto/lua_cocos2dx_webview_auto.hpp
-        auto/lua_cocos2dx_video_auto.hpp
-        manual/ui/lua_cocos2dx_video_manual.hpp
+        scripting/lua-bindings/manual/ui/lua_cocos2dx_webview_manual.hpp
+        scripting/lua-bindings/auto/lua_cocos2dx_webview_auto.hpp
+        scripting/lua-bindings/auto/lua_cocos2dx_video_auto.hpp
+        scripting/lua-bindings/manual/ui/lua_cocos2dx_video_manual.hpp
         )
     set(lua_bindings_manual_files
         ${lua_bindings_manual_files}
-        manual/ui/lua_cocos2dx_webview_manual.cpp
-        auto/lua_cocos2dx_webview_auto.cpp
-        manual/ui/lua_cocos2dx_video_manual.cpp
-        auto/lua_cocos2dx_video_auto.cpp
+        scripting/lua-bindings/manual/ui/lua_cocos2dx_webview_manual.cpp
+        scripting/lua-bindings/auto/lua_cocos2dx_webview_auto.cpp
+        scripting/lua-bindings/manual/ui/lua_cocos2dx_video_manual.cpp
+        scripting/lua-bindings/auto/lua_cocos2dx_video_auto.cpp
         )
 endif()
 
@@ -171,8 +171,8 @@ get_target_property(lua_ext_depend external CC_LUA_DEPEND)
 target_link_libraries(luacocos2d ${lua_ext_depend})
 
 target_include_directories(luacocos2d
-    PRIVATE manual/platform/android
-    PRIVATE manual/platform/android/jni
+    PRIVATE scripting/lua-bindings/manual/platform/android
+    PRIVATE scripting/lua-bindings/manual/platform/android/jni
     INTERFACE ${cocos_root}/cocos/scripting/lua-bindings/auto
     INTERFACE ${cocos_root}/cocos/scripting/lua-bindings/manual
 )
